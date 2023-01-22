@@ -55,7 +55,7 @@ const getUrl = async function (req, res) {
 
     let urlCode = req.params.urlCode.trim()
 
-    if (!urlCode) return res.status(400).send({ status: false, message: "enter urlCode" })
+    if (!urlCode) return res.status(400).send({ status: false, message: "please provide urlCode" })
 
     let cahcedLongUrl = await caching.GET_ASYNC(`${urlCode}`)
 
